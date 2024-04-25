@@ -3,6 +3,7 @@ Automatically organizes your Media Pool in DaVinci Resolve!
 
 Based on your clip's file name, it will be sorted into the most fitting bin of your Media Pool.
 
+![MP_Sorter](https://github.com/neezr/AI-Media-Pool-Sorter-for-DaVinci-Resolve/assets/145998491/1ce5a499-a371-484f-b394-eb1e1858443e)
 
 
 ## Usage:
