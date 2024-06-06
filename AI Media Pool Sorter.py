@@ -58,7 +58,10 @@ else:
 		from transformers import pipeline
 		
 		show_error_message(f"Thank you for using 'Nizar's AI Media Pool Sorter for DaVinci Resolve'\nBecause this is the first time using this script on this machine, the model will now be downloaded (1.5 GB) in the background.\n\nDepending on your internet speed, this may take some time.\n\n\nYou should find the downloaded file under: '{pickle_path}'")
-	
+		
+		if not os.path.exists(os.path.dirname(pickle_path)):
+			os.makedirs(os.path.dirname(pickle_path))
+		
 		classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
 		with open(pickle_path, "wb") as fh:
 			pickle.dump(classifier, fh)
